@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>Events Testing</h1>
+    <input type="text" name="name" id="name">
+    <button type="button" id="btn" onclick="fnClick();">Submit</button>
+    <script>
+        function fnClick() {
+            alert("button clicked");
+        }
+
+        document.getElementById('name').onfocus = function() {
+            this.value = 'get focus';
+        }
+
+        document.getElementById('name').addEventListener('blur', function() {
+            this.value = 'lost focus';
+        })
+    </script>
+</body>
+</html>

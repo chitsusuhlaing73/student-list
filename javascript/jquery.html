@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>JQuery Testing</h1>
+    <input type="text" name="name" id="name">
+    <input type="text" name="age" id="age">
+    <button type="button" id="btn">Submit</button>
+    <script>
+        $(document).ready(function() {
+            $('input').css('background-color', 'skyblue');
+            $('#name').focus();
+        });
+        $('#btn').click(function() {
+            alert('button clicked');
+        });
+        $('#name').focus(function() {
+            this.value = 'get focus';
+        });
+        $('#name').on('blur', function() {
+            this.value = 'lost focus';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Mission HTML</title>
+    <style>
+        td, th {
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student List Table and Add Form</h1>
+    <h3>Student List</h3>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Grade</th>
+            <th>Roll</th>
+            <th>Gender</th>
+            <tbody>
+                <tr>
+                    <td>Chaw Hsu</td>
+                    <td>Grade 11</td>
+                    <td>1</td>
+                    <td>Female</td>
+                </tr>
+                <tr>
+                    <td>Mg Kg</td>
+                    <td>Grade 6</td>
+                    <td>5</td>
+                    <td>Male</td>
+                </tr>
+            </tbody>
+        </thead>
+    </table>
+    <h3>Student Add Form</h3>
+    <form action="#">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name"><br><br>
+        <label for="grade">Grade</label>
+        <input type="text" name="grade" id="grade"><br><br>
+        <label for="roll">Roll</label>
+        <input type="number" name="roll" id="roll"><br><br>
+        <label for="gender">Gender</label>
+        <select name="gender" id="gender">
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+        </select><br><br><br>
+        <input type="submit" value="Add">
+    </form>
+</body>
+
+</html>

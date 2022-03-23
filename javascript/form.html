@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form name="frm" id="frm">
+        <input type="text" name="name" id="name">
+        <input type="text" name="age" id="age">
+        <input type="checkbox" name="interest" value="movie">Movie
+        <input type="checkbox" name="interest" id="game">Game
+        <button type="submit" id="btn" onclick="clickTest();">Test</button>
+    </form>
+    <script>
+        document.getElementById('name').value = 'Test name';
+        document.getElementsByName('age')[0].value = '20';
+        document.frm.interest[0].checked = 'checked';
+        function clickTest() {
+            document.forms['frm']['name'].value = 'Name2';
+            document.frm.name.style.color = 'red';
+            alert("form button click test");
+        }
+    </script>
+</body>
+</html>

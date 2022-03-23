@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <script>
+        var seq = [1,1,2,3,4,5,6];
+        for (var i = 0; i < seq.length ; i++) {
+            console.log(seq[i]);
+        }
+        var eg1 = "Apple Orange Banana";
+        var res = eg1.split(" "); // divide by space
+        console.log("split" , res);
+        console.log("split" , eg1.split(""));
+        console.log("join" , seq.join("🖤"));
+        console.log("to string" , seq.toString());
+        seq.push(99)
+        console.log("array push" , seq);
+        seq.pop();
+        console.log("array pop" , seq);
+    </script>
+</head>
+<body>
+    <h1>Array Testing</h1>
+</body>
+</html>

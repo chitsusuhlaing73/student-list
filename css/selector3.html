@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Attribute</title>
+    <style>
+        a[href] {
+            color: violet;
+        }
+        /* Equal conditon style */
+        a[href="www.facebook.com"] {
+            color: teal;
+        }
+        /* OR Equal condition style */
+        a[lang|="en"] {
+            color: darkgoldenrod;
+        }
+        /* style of starting with https and including org */
+        a[href^="https"][href$="org"] {
+            color: tomato;
+        }
+        /* insensitive styling using i */
+        a[href*="insensitive" i] {
+            background: crimson;
+        }
+        /* sudo class styling */
+        a:hover {
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <a href="www.google.com" lang="mm">Google</a><br><br>
+    <a href="www.facebook.com" lang="en_us">Facebook</a><br><br>
+    <a href="www.twitter.com" lang="en-us">Twitter</a><br><br>
+    <a href="https://www.aaa.org">Telegram</a><br><br>
+    <a href="https://www.aaa.com">Viber</a><br><br>
+    <a href="INsensitive">Testing INsensitive</a>
+</body>
+</html>

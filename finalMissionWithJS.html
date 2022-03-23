@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Mission HTML</title>
+    <script src="./javascript/js/jquery-3.6.0.min.js"></script>
+    <style>
+        td {
+            border: 3px solid gray;
+            text-align: center;
+        }
+        h1 {
+            color: skyblue;
+            text-align: center;
+        }
+        h3 {
+            color: purple;
+        }
+        h1 + h3 {
+            margin-left: 10px;
+        }
+        table {
+            width: 400px;
+            height: 100%;
+            margin-left: 10px;
+            border: 3px solid navy;
+        }
+        th {
+            border: 3px solid green;
+            background-color: lightgray;
+            text-align: center;
+        }
+        #form {
+            width: 400px;
+            margin: 10px;
+            border: 1px solid gray;
+            background-color: burlywood;
+        }
+        form {
+            margin: 20px;
+        }
+        .form-control {
+            width: 100%;
+            padding-top: 10px;
+        }
+        .form-control input {
+            height: 20px;
+            width: 200px;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        .form-control select {
+            height: 30px;
+            width: 210px;
+            border-radius: 5px;
+        }
+        label[for="roll"] {
+            padding-right: 10px;
+        }
+        input[type="button"] {
+            width: 80px;
+            height: 30px;
+            margin-left: 135px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student List Table and Add Form</h1>
+    <div class="whole-form">
+        <h3>Student List</h3>
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Grade</th>
+                <th>Roll</th>
+                <th>Gender</th>
+                <th>Action</th>
+                <tbody id="ttbody">
+                    <tr>
+                        <td>Chaw Hsu</td>
+                        <td>Grade 11</td>
+                        <td>1</td>
+                        <td>Female</td>
+                        <td><button type="button" class="btnRemove">Remove</button></td>
+                    </tr>
+                    <tr>
+                        <td>Mg Kg</td>
+                        <td>Grade 6</td>
+                        <td>5</td>
+                        <td>Male</td>
+                        <td><button type="button" class="btnRemove">Remove</button></td>
+                    </tr>
+                </tbody>
+            </thead>
+        </table>
+        <div id="form">
+            <form action="#">
+                <h3>Student Add Form</h3>
+                <div class="form-control">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name"><br><br>
+                </div>
+                <div class="form-control">
+                    <label for="grade">Grade</label>
+                    <input type="text" name="grade" id="grade"><br><br>
+                </div>
+                <div class="form-control">
+                    <label for="roll">Roll</label>
+                    <input type="number" name="roll" id="roll"><br><br>
+                </div>
+                <div class="form-control">
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select><br><br><br>
+                </div>
+                <input id="btnSub" type="button" value="Add">
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    $('#btnSub').click(function() {
+        console.log(
+            $('#name').val(),
+            $('#grade').val(),
+            $('#roll').val(),
+            $('#gender').val()
+        );
+        console.log($('#ttbody').children());
+        console.log($('#ttbody').html());
+        var new_tr = "<tr><td>" + $('#name').val() + "</td><td>" + $('#grade').val() + "</td><td>" 
+                        + $('#roll').val() + "</td><td>" + $('#gender').val() 
+                        + "</td><td><button type='button' class='btnRemove'>Remove</button></td></tr>";
+        $('#ttbody').append(new_tr);
+
+        $('#name').val("");
+        $('#grade').val("");
+        $('#roll').val("");
+        $('#gender').val("");
+
+        $('#name').focus();
+        refresh();
+    });
+    function refresh() {
+        $('.btnRemove').click(function(){
+            console.log("Remove " , $(this).parents()[1]);
+            $(this).parents()[1].remove();
+        })
+    }
+    refresh();
+
+</script>
+</html>

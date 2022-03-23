@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Combinator</title>
+    <style>
+        /* same style using comma */
+        h1, h2 {
+            color: red; 
+        }
+        /* inner elements style */
+        p span {
+            color: navy;
+            font-weight: bold;
+        }
+        /* child element style */
+        h3 > span {
+            color: orangered;
+        }
+        /* next sibling elements style */
+        h3 + p {
+            color: purple;
+            font-weight: bold;
+        }
+        /* next all sibling elements style */
+        h4 ~ p {
+            color: sienna;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>I am h1.</h1>
+    <h2>I am h2.</h2>
+    <p>I am p. <span>I am span.</span> <span><i>I am also span.</i></span></p>
+    <h3>I am h3. <span>I am span.</span> <i><span>I also span.</span></i></h3>
+    <p>I am first p.</p>
+    <p>I am second p.</p>
+    <p>I am third p.</p>
+    <h4>I am h4.</h4>
+    <p>I am first p.</p>
+    <p>I am second p.</p>
+    <p>I am third p.</p>
+</body>
+</html>
